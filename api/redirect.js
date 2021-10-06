@@ -1,5 +1,5 @@
 const axios = require('axios').default;
-const docsURL = 'https://framed-docs-truewinter.vercel.app';
+const docsURL = 'https://framed-app.com';
 
 module.exports = (req, res) => {
 	var version = req.query.version;
