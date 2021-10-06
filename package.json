@@ -12,7 +12,7 @@
   },
   "scripts": {
     "deploy-dev": "vercel",
-    "deploy-prod": "vercel --prod",
+    "deploy-prod": "node scripts/remove-dev-file.js && vercel --prod && node scripts/create-dev-file.js",
 	"create-version": "node scripts/create-version.js"
   },
   "author": "TrueWinter",
