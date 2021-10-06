@@ -11,7 +11,7 @@
     "vercel": "^23.1.2"
   },
   "scripts": {
-    "deploy-dev": "vercel",
+    "deploy-dev": "node scripts/create-dev-file.js && vercel",
     "deploy-prod": "node scripts/remove-dev-file.js && vercel --prod && node scripts/create-dev-file.js",
 	"create-version": "node scripts/create-version.js"
   },
