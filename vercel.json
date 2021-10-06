@@ -1,0 +1,9 @@
+{
+	"cleanUrls": true,
+	"github": {
+		"silent": true
+	},
+	"rewrites": [
+		{ "source": "/docs/:version", "destination": "/api/redirect" }
+	]
+}

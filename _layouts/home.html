@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% assign dev = false %}
+{% for static_file in site.static_files %}
+	{% if static_file.path == '/-DEV' %}
+		{% assign dev = true %}
+	{% endif %}
+{% endfor %}
+
+<div>
+  {{ content }}
+</div>

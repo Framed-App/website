@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% assign dev = false %}
+{% for static_file in site.static_files %}
+	{% if static_file.path == '/-DEV' %}
+		{% assign dev = true %}
+	{% endif %}
+{% endfor %}
+
+<div>
+
+	{{ content }}
+
+	{% assign stableCount = 0 %}
+	{% assign betaCount = 0 %}
+
+	{% for post in site.posts %}
+		{% if post.categories contains "stable" %}
+			{% assign stableCount = stableCount | plus: 1 %}
+		{% endif %}
+
+		{% if post.categories contains "beta" %}
+			{% assign betaCount = betaCount | plus: 1 %}
+		{% endif %}
+	{% endfor %}
+
+	{% if stableCount > 0 %}
+		<h2>Stable</h2>
+		{% for post in site.posts %}
+			{% if post.categories contains "stable" %}
+				<div>
+					<a class="version-link" href="{{ post.url | relative_url | replace: ".html","" }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+				</div>
+			{% endif %}
+		{% endfor %}
+		<hr>
+	{% endif %}
+
+	{% if betaCount > 0 %}
+		<h2>Beta</h2>
+		{% for post in site.posts %}
+			{% if post.categories contains "beta" %}
+				<div>
+					<a class="version-link" href="{{ post.url | relative_url | replace: ".html","" }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+				</div>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+</div>

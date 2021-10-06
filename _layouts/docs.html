@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+{% assign dev = false %}
+{% for static_file in site.static_files %}
+	{% if static_file.path == '/-DEV' %}
+		{% assign dev = true %}
+	{% endif %}
+{% endfor %}
+
+<article itemscope itemtype="http://schema.org/Article">
+	{% toc %}
+	<div itemprop="articleBody">
+		{{ content }}
+	</div>
+
+</script>
+	<script>
+	function getParameterByName(name, url = window.location.href) {
+		name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}
+
+		window.addEventListener('load', function() {
+			if (getParameterByName('from-version')) {
+				var heading = document.getElementsByTagName('h1')[0];
+				var regex = /^v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9a-zA-Z.]+)?$/;
+
+				if (!heading) return;
+				if (!getParameterByName('from-version').match(regex)) return;
+
+				var elem = document.createElement('div');
+				elem.className = 'alert alert-info';
+				elem.innerText = `No documentation for version ${getParameterByName('from-version').replace(/^v/, '')} exists yet, so you were redirected to the documentation for a previous version.`;
+
+				heading.parentNode.insertBefore(elem, heading.nextSibling);
+
+				window.history.pushState({}, null, window.location.href.split("?")[0]);
+			}
+		});
+
+		var _toc = document.querySelectorAll('#toc a')
+		
+		for (var i = 0; i < _toc.length; i++) {
+			_toc[i].addEventListener('click', (e) => {
+				e.preventDefault();
+
+				var _src = e.target.href.replace(location.href, '');
+
+				$('html,body').animate({
+                    scrollTop: $(_src).offset().top - $('.navbar').outerHeight()
+                });
+			});
+		}
+
+		window.addEventListener('load', function() {
+			if (location.hash && $(location.hash).length > 0) {
+                $('html,body').animate({
+                    scrollTop: $(location.hash).offset().top - $('.navbar').outerHeight()
+                });
+            }
+		});
+	</script>
+</article>

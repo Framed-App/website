@@ -1,0 +1,18 @@
+---
+---
+{
+	"beta": [
+		{% for post in site.posts %}
+				{% if post.categories contains "beta" %}
+				"{{ post.title }}"{% unless forloop.last %},{% endunless %}
+				{% endif %}
+		{% endfor %}
+	],
+	"stable": [
+		{% for post in site.posts %}
+				{% if post.categories contains "stable" %}
+				"{{ post.title }}"{% unless forloop.last %},{% endunless %}
+				{% endif %}
+		{% endfor %}
+	]
+}

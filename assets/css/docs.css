@@ -1,0 +1,28 @@
+.version-link {
+	font-size: 1.1em;
+}
+
+.highlight {
+	padding: .8rem;
+	border-radius: 4px;
+}
+
+article {
+	padding-bottom: 16px;
+}
+
+.form-control {
+    background-color: #222;
+    border: 1px solid gray;
+	color: #dfe8ee;
+}
+
+.form-control:focus {
+	background-color: inherit;
+	color: #dfe8ee;
+}
+
+.pad-32 {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
