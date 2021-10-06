@@ -1,9 +1,7 @@
 {% assign dev = false %}
-{% for static_file in site.static_files %}
-	{% if static_file.path == '/-DEV' %}
-		{% assign dev = true %}
-	{% endif %}
-{% endfor %}
+{% if jekyll.environment != "production" %}
+	{% assign dev = true %}
+{% endif %}
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">

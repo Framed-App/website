@@ -1,5 +1,5 @@
 {
-  "name": "framed-docs",
+  "name": "framed-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,8 @@
     "vercel": "^23.1.2"
   },
   "scripts": {
-    "deploy-dev": "node scripts/create-dev-file.js && vercel",
-    "deploy-prod": "node scripts/remove-dev-file.js && vercel --prod && node scripts/create-dev-file.js",
+    "deploy-dev": "vercel",
+    "deploy-prod": "vercel --prod",
 	"create-version": "node scripts/create-version.js"
   },
   "author": "TrueWinter",
