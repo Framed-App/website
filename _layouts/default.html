@@ -1,3 +1,10 @@
+{% assign dev = false %}
+{% for static_file in site.static_files %}
+	{% if static_file.path == '/-DEV' %}
+		{% assign dev = true %}
+	{% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
@@ -51,7 +58,7 @@
 				<img src="/assets/brand/framed-full-300.png" style="margin: 0px;height: 64px;">
 			</a>
 			<button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
+            <div class="collapse navbar-collapse" id="navcol-1">{% if dev %} DEV{% endif %}
                 <ul class="nav navbar-nav ms-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">GitHub</a></li>
@@ -134,5 +141,14 @@ var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
 			}
 		});
 	</script>
+	{% if site.analytics %}
+		{% if dev %}
+			<script>console.log('Dev mode; analytics disabled');</script>
+		{% else %}
+		<!-- Cloudflare Web Analytics -->
+		
+		<!-- End Cloudflare Web Analytics -->
+		{% endif %}
+	{% endif %}
   </body>
 </html>
