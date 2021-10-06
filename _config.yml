@@ -23,6 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://framed-app.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /docs/:title
+logo: /assets/brand/framed-square.png
 
 # Build settings
 #theme: minima
