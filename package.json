@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.22.0"
+    "axios": "^0.22.0",
+    "moment": "^2.29.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vercel": "^23.1.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy-dev": "vercel",
+    "deploy-prod": "vercel --prod",
+	"create-version": "node scripts/create-version.js"
   },
   "author": "TrueWinter",
   "license": "GPL-3.0"
