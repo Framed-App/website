@@ -138,12 +138,10 @@ var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
 			}
 		});
 	</script>
-	{% if site.analytics %}
-		{% if dev %}
-			<script>console.log('Dev mode; analytics disabled');</script>
-		{% else %}
-			<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a397a14e705d4d0998d5ed5eb76e3f66"}'></script><!-- End Cloudflare Web Analytics -->
-		{% endif %}
+	{% if dev %}
+		<script>console.log('Dev mode; analytics disabled');</script>
+	{% else %}
+		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a397a14e705d4d0998d5ed5eb76e3f66"}'></script><!-- End Cloudflare Web Analytics -->
 	{% endif %}
   </body>
 </html>

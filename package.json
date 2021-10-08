@@ -12,7 +12,7 @@
   },
   "scripts": {
     "deploy-dev": "vercel",
-    "deploy-prod": "vercel --prod",
+    "deploy-prod": "vercel --prod --build-env JEKYLL_ENV=production",
 	"create-version": "node scripts/create-version.js"
   },
   "author": "TrueWinter",
