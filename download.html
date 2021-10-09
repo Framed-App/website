@@ -25,7 +25,7 @@ title: Download
 
 	function showBetaWarn(version) {
 		var elem = document.createElement('div');
-		elem.classList('alert alert-warn');
+		elem.className = 'alert alert-warn';
 		elem.innerHTML = `There are no stable releases yet. ${version} is a beta release, which may contain bugs and unfinished features.`;
 
 		var downloadsElem = document.getElementById('downloads');
@@ -34,7 +34,7 @@ title: Download
 
 	function showError() {
 		var elem = document.createElement('div');
-		elem.classList('alert alert-error');
+		elem.className = 'alert alert-error';
 		elem.innerHTML = 'Failed to get latest version from API. Please find the latest stable release at <a href="https://github.com/Framed-App/framed/releases">https://github.com/Framed-App/framed/releases</a>.';
 
 		var downloadsElem = document.getElementById('downloads');
