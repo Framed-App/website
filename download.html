@@ -8,7 +8,7 @@ title: Download
 <script>
 	window.addEventListener('load', function() {
 		$.getJSON('https://cf-api.framed-app.com/latest-download').done(function (data) {
-			if (!data.status) return showError();
+			if (!data.success) return showError();
 			
 			showDownload(data.version);
 
