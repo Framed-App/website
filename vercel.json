@@ -4,6 +4,15 @@
 		"silent": true
 	},
 	"rewrites": [
-		{ "source": "/docs/:version", "destination": "/api/redirect" }
+		{
+			"source": "/docs/:version",
+			"destination": "/api/redirect"
+		}
+	],
+	"redirects": [
+		{
+			"source": "/discord",
+			"destination": "https://discord.gg/BjzHtFYhSA"
+		}
 	]
 }
