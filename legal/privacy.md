@@ -25,6 +25,7 @@ Framed keeps track of the Web sites and pages our customers visit within the Fra
 
 - Framed uses a third-party service, Cloudflare, to secure the Site and speed up performance. Cloudflare's Analytics service is also used. For more information about Cloudflare’s privacy practices, see their [Privacy Policy](https://www.cloudflare.com/en-gb/privacypolicy/)
 - Some Framed websites/services are hosted on Vercel. You can read their privacy policy [here](https://vercel.com/legal/privacy-policy)
+- A Twitter Ads script is included on the Framed website. This allows us to track the success of our Twitter ads. You can read their privacy policy [here](https://twitter.com/en/privacy)
 
 ## Use of Cookies
 
