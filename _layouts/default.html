@@ -21,12 +21,20 @@
 
     <title>{{ page-title }}</title>
 	  <style>
-		  img:not([src]) {
-				visibility: hidden;
-			}
-		  .ad-ns {
-			  display:none;
-		  }
+		img:not([src]) {
+			visibility: hidden;
+		}
+		
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		
+		.container {
+			flex: content;
+		}
 	  </style>
 
     {% if site.gems contains "jekyll-seo-tag" %}
