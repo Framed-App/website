@@ -21,7 +21,7 @@ Framed collects and uses your personal information to operate the Framed website
 
 In addition, Framed may share data with trusted partners to help us perform statistical analysis, send you email or postal mail, provide customer support, arrange for deliveries, or otherwise help provide the service. All such third parties are prohibited from using your personal information except to provide these services to Framed, and they are required to maintain the confidentiality of your information. Framed does not use or disclose sensitive personal information, such as race, religion, or political affiliations, without your explicit consent.
 
-Framed keeps track of the Web sites and pages our customers visit within the Framed website, in order to determine what Framed services are the most popular. This data is used to deliver customized content and advertising within Framed to customers whose behaviour indicates that they are interested in a particular subject area. Framed websites will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to: (a) conform to the edicts of the law or comply with legal process served on Framed or the site; (b) protect and defend the rights or property of Framed; and, (c) act under exigent circumstances to protect the personal safety of users of Framed or the public.
+Framed keeps track of the Web sites and pages our customers visit within the Framed website, in order to determine what Framed services are the most popular. Framed websites will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to: (a) conform to the edicts of the law or comply with legal process served on Framed or the site; (b) protect and defend the rights or property of Framed; and, (c) act under exigent circumstances to protect the personal safety of users of Framed or the public.
 
 - Framed uses a third-party service, Cloudflare, to secure the Site and speed up performance. Cloudflare's Analytics service is also used. For more information about Cloudflare’s privacy practices, see their [Privacy Policy](https://www.cloudflare.com/en-gb/privacypolicy/)
 - Some Framed websites/services are hosted on Vercel. You can read their privacy policy [here](https://vercel.com/legal/privacy-policy)
@@ -49,7 +49,7 @@ You have the ability to accept or decline cookies. Most Web browsers automatical
 
 ## Security of your Personal Information
 
-Framed secures your personal information from unauthorized access, use or disclosure. Framed secures the personally identifiable information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use or disclosure. When personal information (such as a credit card number) is transmitted to other Web sites, it is protected through the use of encryption, such as the Secure Socket Layer (SSL) protocol.
+Framed secures your personal information from unauthorized access, use or disclosure. Framed secures the personally identifiable information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use or disclosure. When personal information is transmitted to other Web sites, it is protected through the use of encryption, such as the Secure Socket Layer (SSL) protocol.
 
 ## Changes to this Statement
 
