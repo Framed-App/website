@@ -26,6 +26,7 @@ url: "https://framed-app.com" # the base hostname & protocol for your site, e.g.
 permalink: /docs/:title
 logo: /assets/brand/framed-square.png
 metalogo: /assets/brand/framed-1200-630.png
+twittertracking: false
 
 # Build settings
 #theme: minima
