@@ -1,10 +1,10 @@
 const axios = require('axios').default;
-const docsURL = 'https://framed-app.com';
+const semver = require('semver');
 
 module.exports = (req, res) => {
 	var version = req.query.version;
 
-	console.log(req);
+	const docsURL = `https://${req.headers.host}`;
 
 	if (!version) {
 		return res.status(400).send('Version is required');
@@ -17,24 +17,27 @@ module.exports = (req, res) => {
 	}
 
 	axios.get(`${docsURL}/static-json/versions.json`).then(function(response) {
-		var data = [...response.data.beta, ...response.data.stable];
+		var data = [...response.data.beta, ...response.data.stable].sort((a, b) => semver.gt(a, b) ? 1 : -1);
+
+		console.log(data);
 
 		if (data.includes(version)) {
 			return res.redirect(`${docsURL}/docs/${version}`);
 		}
 
 		var requestedVersion = version.replace(/^v/, '');
-		data.sort();
 
 		var closestVersion = '';
 		for (var i = 0; i < data.length; i++) {
 			var _thisVersion = data[i].replace(/^v/, '');
-			if (_thisVersion > requestedVersion) {
+			if (semver.gt(_thisVersion, requestedVersion)) {
 				continue;
 			}
 
 			closestVersion = _thisVersion;
 		}
+
+		console.log(closestVersion, _thisVersion);
 
 		if (!closestVersion) {
 			return res.status(404).end('Failed to find previous version');
